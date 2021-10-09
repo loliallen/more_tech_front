@@ -1,8 +1,8 @@
-import {DatasetItem} from "../components/DatasetItem";
-import {BrowserRouter, Route, Switch} from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import Datasets from "../pages/Datasets";
-import {Header} from "../components/Header";
+import { Header } from "../components/Header";
+import { Pages } from "../pages";
 
 const datasetItem = {
   size: 1.2,
@@ -16,14 +16,7 @@ const datasetItem = {
 export const App = () => {
   return (
     <BrowserRouter>
-      <Switch>
-        <Route exact path="/" component={() => <p>Login</p>} />
-
-        <Switch>
-          <Header />
-          <Route exact path="/datasets" component={Datasets} />
-        </Switch>
-      </Switch>
+      <Pages/>
     </BrowserRouter>
   );
 };
