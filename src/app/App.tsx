@@ -1,10 +1,10 @@
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import {BrowserRouter} from "react-router-dom";
 
 import Datasets from "../pages/Datasets";
-import { Header } from "../components/Header";
-import { Pages } from "../pages";
-import { ThemeProvider } from "@mui/material";
-import { theme } from "./theme";
+import {Header} from "../components/Header";
+import {Pages} from "../pages";
+import {ThemeProvider} from "@mui/material";
+import {theme} from "./theme";
 
 const datasetItem = {
   size: 1.2,
@@ -18,9 +18,9 @@ const datasetItem = {
 export const App = () => {
   return (
     <BrowserRouter>
-    <ThemeProvider theme={theme}>
-      <Pages/>
-    </ThemeProvider>
+      <ThemeProvider theme={theme}>
+        <Pages />
+      </ThemeProvider>
     </BrowserRouter>
   );
 };
