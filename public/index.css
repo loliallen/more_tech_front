@@ -1,0 +1,8 @@
+body,
+html {
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-feature-settings: "tnum" on, "lnum" on;
+  background: #0a2973;
+  box-shadow: 0px 4px 70px rgba(0, 0, 0, 0.22);
+}
