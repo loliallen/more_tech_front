@@ -1,8 +1,8 @@
-import DatasetItem from "../components/DatasetItem";
+import {DatasetItem} from "../components/DatasetItem";
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 
 import Datasets from "../pages/Datasets";
-import Header from "../components/Header";
+import {Header} from "../components/Header";
 
 const datasetItem = {
   size: 1.2,
