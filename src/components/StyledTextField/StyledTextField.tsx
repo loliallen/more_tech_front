@@ -9,7 +9,8 @@ export const StyledTextField = withStyles(t => ({
         "& input": {
             backgroundColor: t.palette.primary.main,
             borderRadius: 4,
-            zIndex: 0
+            zIndex: 0,
+            color: t.palette.text.secondary
         },
         "& .MuiOutlinedInput-root": {
             "& fieldset": {
