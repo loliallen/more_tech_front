@@ -1,5 +1,4 @@
 {
-
   "name": "more_tech",
   "version": "0.1.0",
   "private": true,
@@ -63,5 +62,4 @@
     "@types/redux": "^3.6.0",
     "@types/styled-components": "^5.1.15"
   }
-
 }

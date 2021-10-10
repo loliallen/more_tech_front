@@ -1,8 +1,10 @@
+import axios from "../axios"
 
 const setToken = (token: string) => {
     // set token
-    const cookie = `csrftoken=${token}`
-    document.cookie = cookie
+    if (!axios.defaults.headers)
+        axios.defaults.headers = {}
+    axios.defaults.headers['Authorization'] = `Token ${token}`
 }
 
 export default setToken
