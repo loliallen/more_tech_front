@@ -1,11 +1,12 @@
 import { useSelector } from 'react-redux'
+import { Redirect } from 'react-router'
 import { AppState, IReduxStore } from '../store/interfaces'
 
 export const SwitchContainer = ({ children }: { children: any }) => {
 
     const { authorized } = useSelector<IReduxStore, AppState>(s => s.app)
 
-    if (!authorized)
+    if (authorized)
         return children || null
-    return null
+    return <Redirect to="/"/>
 }

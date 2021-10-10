@@ -11,9 +11,14 @@ const set = (ds: IDataset[]) => ({
     type: DATASET_TYPES.set,
     payload: ds
 })
-const setc = (ds: IDataset[]) => ({
+const setc = (ds: IDataset) => ({
     type: DATASET_TYPES.setc,
     payload: ds
+})
+
+const getc = (id: string) => ({
+    type: DATASET_TYPES.getc,
+    payload: id
 })
 const create = (data: any) => ({
     type: DATASET_TYPES.get,
@@ -32,6 +37,7 @@ const datasetActions = {
     get,
     set,
     setc,
+    getc,
     create,
     update,
     remove

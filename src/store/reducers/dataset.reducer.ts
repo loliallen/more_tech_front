@@ -1,8 +1,8 @@
 import { ReduxAction } from "../../interfaces/redux";
-import { RoleState } from "../interfaces";
+import { DatasetState } from "../interfaces";
 import DATASET_TYPES from "../types/dataset";
 
-const initalState: RoleState = {
+const initalState: DatasetState = {
     list: [],
     current: null
 }

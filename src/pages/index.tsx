@@ -6,6 +6,7 @@ import Datasets from "./Datasets";
 import AddDataset from "./DatasetAdd";
 import { PersonalPage } from "./PersonalPage";
 import { SwitchContainer } from "../containers/SwitchContainer";
+import Dataset from "./Dataset";
 
 export const Pages = () => (
   <Switch>
@@ -15,6 +16,7 @@ export const Pages = () => (
       <Header />
       <Switch>
         <Route exact path="/datasets" component={Datasets} />
+        <Route exact path="/dataset/:id" component={Dataset} />
         <Route exact path="/addSet" component={AddDataset} />
         <Route exact path="/personal" component={PersonalPage} />
       </Switch>

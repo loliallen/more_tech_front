@@ -36,11 +36,11 @@ export const useStyles = makeStyles((t) => ({
     header: {
         display: "flex",
         alignItems: "center",
-        columnGap: 10
+        columnGap: "10px"
     },
     header_item: {
         fontWeight: 500,
-        fontSize: 14,
+        fontSize: "14px",
         lineHeight: "20px",
         letterSpacing: "0.005em",
         background: "#0a2973",
@@ -51,14 +51,14 @@ export const useStyles = makeStyles((t) => ({
     title: {
         fontWeight: 600,
         fontSize: 16,
-        lineHeight: 24,
+        lineHeight: "24px",
         letterSpacing: "0.005em",
         color: "#000000"
     },
     author: {
         fontWeight: "normal",
         fontSize: 14,
-        lineHeight: 20,
+        lineHeight: "20px",
         letterSpacing: "0.0168em",
         color: "#414141"
     }

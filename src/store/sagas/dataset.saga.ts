@@ -14,7 +14,7 @@ function* getWatcher({ payload }: ReduxAction<GetParams>) {
 }
 function* getcWatcher({ payload }: ReduxAction<string>) {
     try {
-        const res: IDataset[] = yield call(datasetApiRequests.getc, payload)
+        const res: IDataset = yield call(datasetApiRequests.getc, payload)
         yield put(datasetActions.setc(res))
     } catch {
 
