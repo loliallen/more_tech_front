@@ -1,5 +1,5 @@
 import { Button, Typography } from "@mui/material"
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import useInput from "../../hooks/useInput"
 import appActions from "../../store/actions/app.actions"
 import { StyledTextField } from "../StyledTextField/StyledTextField"
@@ -9,6 +9,9 @@ import bl from "./images/bottom_left.png"
 import l1 from "./images/label_1.png"
 import l2 from "./images/label_2.png"
 import logo from "../../assets/logo.svg"
+import { AppState, IReduxStore } from "../../store/interfaces"
+import { useEffect } from "react"
+import { useHistory } from "react-router"
 
 
 type ImagesProps = {
@@ -31,7 +34,9 @@ const Images = ({ classNames }: ImagesProps) => {
 }
 
 export const LoginComponent = () => {
+    const history = useHistory()
     const dispatch = useDispatch()
+    const authorized = useSelector<IReduxStore, boolean>(s => s.app.authorized)
     
     const classes = useStyles()
     const login = useInput<string>("")
@@ -42,6 +47,10 @@ export const LoginComponent = () => {
         e.stopPropagation()
         dispatch(appActions.login(login.value, password.value))
     }
+    useEffect(()=>{
+        if(authorized)
+            history.push('/datasets')
+    },[authorized])
     return (
         <div className={classes.container}>
             <Images classNames={{
@@ -64,7 +73,7 @@ export const LoginComponent = () => {
                     <StyledTextField variant="outlined" fullWidth color="secondary" {...password.bind} />
                 </div>
                 <div className={classes.button_container}>
-                    <Button variant="outlined" color="primary" size="large" fullWidth>Войти</Button>
+                    <Button type="submit" variant="outlined" color="primary" size="large" fullWidth>Войти</Button>
                 </div>
             </form>
         </div>

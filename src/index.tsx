@@ -3,8 +3,15 @@ import ReactDOM from 'react-dom';
 import { App } from './app';
 import { Provider } from "react-redux"
 import reportWebVitals from './reportWebVitals';
-import { store } from './store';
+
 import GlobalStyle from './globalStyles';
+
+import { saga, store } from './store';
+import sagaWatcher from './store/sagas';
+
+
+saga.run(sagaWatcher)
+
 
 ReactDOM.render(
   <React.StrictMode>
