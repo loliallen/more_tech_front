@@ -1,7 +1,11 @@
 import { BrowserRouter } from "react-router-dom";
 
+
+import Datasets from "../pages/Datasets";
+import {Header} from "../components/Header";
+import {ThemeProvider} from "@mui/material";
+import GlobalStyle from "../globalStyles";
 import { Pages } from "../pages";
-import { ThemeProvider } from "@mui/material";
 import { theme } from "./theme";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
@@ -30,6 +34,7 @@ export const App = () => {
   }, [authorizeStatus, authorized])
   return (
     <BrowserRouter>
+    <GlobalStyle/>
       <ThemeProvider theme={theme}>
         <Pages />
       </ThemeProvider>
