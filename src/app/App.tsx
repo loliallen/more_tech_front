@@ -5,6 +5,7 @@ import {Header} from "../components/Header";
 import {Pages} from "../pages";
 import {ThemeProvider} from "@mui/material";
 import {theme} from "./theme";
+import GlobalStyle from "../globalStyles";
 
 const datasetItem = {
   size: 1.2,
@@ -18,6 +19,7 @@ const datasetItem = {
 export const App = () => {
   return (
     <BrowserRouter>
+    <GlobalStyle/>
       <ThemeProvider theme={theme}>
         <Pages />
       </ThemeProvider>
