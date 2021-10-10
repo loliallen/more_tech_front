@@ -19,7 +19,6 @@ export const useStyles = makeStyles((t) => ({
     menu_item: {
         fontWeight: "normal",
         fontSize: 16,
-        lineHeight: 20,
         color: "#ffffff"
     },
     logo: {

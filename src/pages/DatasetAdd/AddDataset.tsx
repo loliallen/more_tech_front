@@ -45,7 +45,6 @@ const AddDataset = () => {
 
   return (
     <>
-      <Header />
 
       <div className={styles.container}>
         <h1 className={styles.title}>Загрузка датасета</h1>
