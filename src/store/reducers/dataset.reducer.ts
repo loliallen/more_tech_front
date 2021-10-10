@@ -12,6 +12,7 @@ export const datasetReducer = (state = initalState, action: ReduxAction) => {
         case DATASET_TYPES.set:
             return { ...state, list: action.payload }
         case DATASET_TYPES.setc:
+            action.payload.analytics = JSON.parse(action.payload.analytics)
             return { ...state, current: action.payload }
         default:
             return state

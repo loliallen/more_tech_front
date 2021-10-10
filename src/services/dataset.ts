@@ -15,7 +15,7 @@ const get = async (params: GetParams = {}) => {
 
 const getc = async (id: string) => {
     const res = await axios.get('/api/datasets/get/', { params: { id } })
-    return res.data
+    return res.data[0]
 }
 
 const create = async (data: IDataset) => {
